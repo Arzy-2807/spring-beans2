@@ -1,21 +1,17 @@
 package peaksoft.model;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
+
 @Component
-public class Timer {
+@Qualifier("dog")
+public class Dog extends Animal {
 
-    private Long nanoTime = System.nanoTime();
-
-
-@Autowired
-    public Long getTime() {
-       return nanoTime;
-    }
 
     @Override
     public String toString() {
-        return super.toString();
+        return "I'm a dog";
     }
 }
